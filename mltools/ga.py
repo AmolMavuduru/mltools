@@ -1,7 +1,7 @@
 import copy
 import numpy as np
 import random
-from nn import NeuralNet
+from .nn import NeuralNet
 
 class TournSelect (object):
     def __init__ (self, pop_size, input_size, output_size, k):
@@ -24,7 +24,7 @@ class TournSelect (object):
         k_groups = [[] for i in range(self.k)]
 
         # Split creatures into categories
-        for i, creature in enumerate(self.pop.iteritems()):
+        for i, creature in enumerate(self.pop.items()):
             k_groups[ i % self.k ].append( creature )
 
         # New empty pop

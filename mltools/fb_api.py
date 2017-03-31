@@ -107,7 +107,7 @@ class EvoComm (object):
         t2 = time.time()
 
         if self.iteration % 100 == 0:
-            print "Action serialize (ms)=%s" % ((t2 - t1)*1000)
+            print ("Action serialize (ms)={0}").format((t2 - t1)*1000)
 
         # Build action table
         t1 = time.time()
@@ -123,7 +123,7 @@ class EvoComm (object):
         t2 = time.time()
 
         if (self.iteration % 100 == 0):
-            print "Build time: {0}".format((t2-t1)*1000)
+            print ("Build time: {0}").format((t2-t1)*1000)
             #print "Total time: {0}".format((t2-t_begin)*1000)
 
         self.iteration += 1
